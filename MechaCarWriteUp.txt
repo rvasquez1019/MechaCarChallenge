@@ -1,4 +1,21 @@
-	# Shapiro-Wilk normality test
+1. Multiple Linear Regression
+
+-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+    The following variables that are statistically not to provide random amounts of variance to the linear model are the following.
+
+>the vehicle.length
+>ground.clearance 
+>Intercept
+
+-Is the slope of the linear model considered to be zero? Why or why not?
+    No, by stating that the slope of the linear model is not zero.  There is sufficent evidence to reject our null hypothesis.
+
+-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+    No, the r-squared value is 0.7032, this means there is an estimated 70% of all mpg predictions that will be correct when using the multiple linear model.
+
+*****See results below*****
+
+        Shapiro-Wilk normality test
 
 data:  mechaCar_mpg$mpg
 W = 0.98536, p-value = 0.7869
@@ -33,10 +50,19 @@ Residual standard error: 8.853 on 45 degrees of freedom
 Multiple R-squared:  0.7032,	Adjusted R-squared:  0.6768 
 F-statistic: 26.65 on 4 and 45 DF,  p-value: 2.277e-11
 
+2. Suspension Coil Summary 
+
+-Does the current manufacturing data meet this design specification? Why or why not?
+    The summary statistics table shows a variance of 76.23459, does not exceed the 100 pounds per inch requirement of the design specifications.
+
+*****See tables below*****
+
+                The Summary Statistics Table
 
 Mean_PSI    Median_PSI      Variance_PSI    Stdev_PSI
 1499.531    1499.747        76.23459        8.731242
 	
+            The Summary Statistics Group by 3 Manufacturing Lots
 
 Manufacturing_Lot   Mean_PSI    Median_PSI  Variance_PSI    Stdev_PSI
 
@@ -44,6 +70,9 @@ Lot1                1500.018    1500.206    1.146024        1.070525
 Lot2                1499.571    1498.873    10.131511       3.183003
 Lot3                1499.004    1497.981    220.010563      14.832753
 
+3. Suspension Coil T-Test
+
+The results are shown below.   
 
 	One Sample t-test
 
@@ -56,3 +85,18 @@ sample estimates:
 mean of x 
 1499.531 
 
+4. Design of Own Study
+
+-Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+   There are many metrics that would affect the experience on purchasing a new vehicle. Mpg's, horsepower, color, & cost.  The cost is 
+   the most important to a consumer.  Next will be the MPG's followed by the performance of the vehicle.  Looking at the other metrics
+   is the exterior design and the how the interior looks and feels to the consumer.  
+
+-Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
+    The null hypothesis does not show no statistical relationship between the units sold and a car prices.  The statistical test could be determined by using the single linear 
+    regression model.
+
+-Knowing what test should be used, what data should be collected?
+    The type of data that should be collected is how many units sold and the price of the unit that was sold.  The same results could be used to determining on how much inventory to 
+    keep month by month and how the future sales will affect on how many salesmen to have and the success of the dealership.
+       
